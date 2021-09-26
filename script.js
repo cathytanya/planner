@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     // variable based used for the time(hours)
     let check = parseInt(moment().format("HH"));
-    console.log(now);
+    console.log(check);
 
     // variable linked to the seperate time slots in the planner
     let $time9AM = $("#time9AM");
@@ -19,6 +19,22 @@ $(document).ready(function(){
     let $time4PM = $("#time4PM");
     let $time5PM = $("#time5PM");
 
+    // if statement which determine the colour of the planner dependent on the time of day
+    $("textarea").each(function(){
+        let current = parseInt($(this).attr("current"));
+        // if statement stating that if the time past the text box should turn grey
+        if (current < check){
+            $(this).addClass("past");
+        }
+        // if the time is now the time slot will turn red
+        if (current === check){
+            $(this).addClass("present");
+        }
+        // if statement used to change the text slot green since the time hasnt passed
+        if (current > check){
+            $(this).addClass("future");
+        }
+    })
 
 })
 
