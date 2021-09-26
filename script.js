@@ -3,4 +3,3 @@ let todayDate = moment().format("ddd MMM Do, YYYY, hh:mm:ss")
 $("#currentDay").text(todayDate)
 
 
-skmalmdalkmds

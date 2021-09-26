@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: burlywood;
 }
 
 textarea {
@@ -21,7 +22,7 @@ textarea {
   border-radius: 0;
   border-bottom: 10px solid black;
 }
-the title
+/* the title */
 .display-3{
   font-size: 100px;
   font-weight: bolder;
@@ -83,3 +84,16 @@ the title
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+/* #time9AM,
+#time10AM,
+#time11AM,
+#time12PM,
+#time1PM,
+#time2PM,
+#time3PM,
+#time4PM,
+#time5PM{
+  position: absolute;
+
+} */
