@@ -19,7 +19,7 @@ textarea {
   background: url("https://i.etsystatic.com/15872687/r/il/6d8699/2129233744/il_794xN.2129233744_17yd.jpg");
   background-size: cover;
   color: black;
-  border-radius: 0;
+  /* border-radius: 0; */
   border-bottom: 10px solid black;
 }
 /* the title */
