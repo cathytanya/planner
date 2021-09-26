@@ -15,10 +15,23 @@ textarea {
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background: url("https://i.etsystatic.com/15872687/r/il/6d8699/2129233744/il_794xN.2129233744_17yd.jpg");
+  background-size: cover;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+}
+the title
+.display-3{
+  font-size: 100px;
+  font-weight: bolder;
+  color: rgb(200, 47, 0);
+}
+/* edit the font of the date and time */
+#currentDay{
+  font-size:x-large;
+  font-weight: bolder;
+  color: rgb(129, 6, 22);
 }
 
 .description {
@@ -40,6 +53,7 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  font-size: x-large;
 }
 
 .past {
@@ -68,10 +82,4 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
-}
-/* edit the font of the date and time */
-#currentDay{
-  font-size:x-large;
-  font-weight: bolder;
-  color: rgb(129, 6, 22);
 }
