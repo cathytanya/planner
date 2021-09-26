@@ -4,6 +4,10 @@ $(document).ready(function(){
     $("#currentDay").text(todayDate)
     console.log(todayDate)
 
+    // variable based used for the time(hours)
+    let check = parseInt(moment().format("HH"));
+    console.log(now);
+
     // variable linked to the seperate time slots in the planner
     let $time9AM = $("#time9AM");
     let $time10AM = $("#tim10AM");
