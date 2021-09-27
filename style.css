@@ -19,7 +19,7 @@ textarea {
   background: url("https://i.etsystatic.com/15872687/r/il/6d8699/2129233744/il_794xN.2129233744_17yd.jpg");
   background-size: cover;
   color: black;
-  /* border-radius: 0; */
+  border-radius: 0;
   border-bottom: 10px solid black;
 }
 /* the title */
@@ -27,6 +27,7 @@ textarea {
   font-size: 100px;
   font-weight: bolder;
   color: rgb(200, 47, 0);
+  text-shadow:5px 5px indigo;
 }
 /* edit the font of the date and time */
 #currentDay{
@@ -64,12 +65,12 @@ textarea {
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #fd0d00;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #00da00;
   color: white;
 }
 

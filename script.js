@@ -8,17 +8,6 @@ $(document).ready(function(){
     let check = parseInt(moment().format("HH"));
     console.log(check);
 
-    // variable linked to the seperate time slots in the planner
-    let $time9AM = $("#time9AM");
-    let $time10AM = $("#tim10AM");
-    let $time11AM = $("#time11AM");
-    let $time12PM = $("#time12PM");
-    let $time1PM = $("#time1PM");
-    let $time2PM = $("#time2PM");
-    let $time3PM = $("#time3PM");
-    let $time4PM = $("#time4PM");
-    let $time5PM = $("#time5PM");
-
     // if statement which determine the colour of the planner dependent on the time of day
     $("textarea").each(function(){
         let current = parseInt($(this).attr("name"));
@@ -36,26 +25,31 @@ $(document).ready(function(){
         }
     })
     // this is where the local storage will be located and stored
-    $("saveBtn").on("click",function(){
-        localStorage.setItem("9AM",($time9AM.val()))
-        localStorage.setItem("10AM",($time10AM.val()))
-        localStorage.setItem("11AM",($time11AM.val()))
-        localStorage.setItem("12PM",($time12PM.val()))
-        localStorage.setItem("1PM",($time1PM.val()))
-        localStorage.setItem("2PM",($time2PM.val()))
-        localStorage.setItem("3PM",($time3PM.val()))
-        localStorage.setItem("4PM",($time4PM.val()))
-        localStorage.setItem("5PM",($time5PM.val()))
+    $(".saveBtn").on("click",function(){
+        let agenda = $(this).sibling(".description").val();
+        let time = $(this).sibling(".hour").text();
+        localStorage.getItem(time,agenda);
+        $("this").sibling(".description").textConteent(localStorage.value);
+
     })
+    let hour9 = localStorage.getItem("9AM")
+    let hour10 = localStorage.getItem("10AM")
+    let hour11 = localStorage.getItem("11AM")
+    let hour12 = localStorage.getItem("12PM")
+    let hour1 = localStorage.getItem("1PM")
+    let hour2 = localStorage.getItem("2PM")
+    let hour3 = localStorage.getItem("3PM")
+    let hour4 = localStorage.getItem("4PM")
+    let hour5 = localStorage.getItem("5PM")
     // present the local storage events entered into the text in box 
-    $("#time9AM").append(localStorage.getItem("9AM"))
-    $("#time10AM").append(localStorage.getItem("10AM"))
-    $("#time10AM").append(localStorage.getItem("10AM"))
-    $("#time12PM").append(localStorage.getItem("12PM"))
-    $("#time1PM").append(localStorage.getItem("1PM"))
-    $("#time2PM").append(localStorage.getItem("2PM"))
-    $("#time3PM").append(localStorage.getItem("3PM"))
-    $("#time4PM").append(localStorage.getItem("4PM"))
-    $("#time5PM").append(localStorage.getItem("5PM"))
+    $("#time9AM").text(hour9)
+    $("#time10AM").text(hour10)
+    $("#time10AM").text(hour11)
+    $("#time12PM").text(hour12)
+    $("#time1PM").text(hour1)
+    $("#time2PM").text(hour2)
+    $("#time3PM").text(hour3)
+    $("#time4PM").text(hour4)
+    $("#time5PM").text(hour5)
 })
 

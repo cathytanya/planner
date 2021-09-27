@@ -5,20 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- link of all necessary third party API or the style sheet -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css" />
     <!-- The name which appears in the tab of the site -->
     <title>Work Day Scheduler</title>
@@ -42,9 +31,12 @@
         </div>
         <div class="description col-10 form-group">
           <textarea id="time9AM" class="form-control textboarder" rows="2" style="resize:none" name="9"></textarea>
-          <button class="saveBtn col-1 btn"></button> 
         </div>
-      </div>
+        <div class="col-1">
+          <button class="saveBtn btn"><i class="fas fa-save"></i></button>  
+        </div>
+
+       </div>
 
       <!-- Time block for 10am -->
       <div class="row timeslot10am">
@@ -54,7 +46,9 @@
         </div>
         <div class="description col-10 form-group">
           <textarea id="time10AM" class="form-control textboarder" rows="2" style="resize:none" name="10"></textarea>
-          <button class="saveBtn col-1 btn"></button> 
+        </div>
+        <div class="col-1">
+          <button class="saveBtn btn"><i class="fas fa-save"></i></button>  
         </div>    
       </div>
 
@@ -66,20 +60,24 @@
         </div>
         <div class="description col-10 form-group">
           <textarea id="time11AM" class="form-control textboarder" rows="2" style="resize:none" name="11"></textarea>
-          <button class="saveBtn col-1 btn"></button> 
         </div>    
+        <div class="col-1">
+          <button class="saveBtn btn"><i class="fas fa-save"></i></button>  
+        </div>
       </div>
 
-      <!-- Time block for 12PM -->
-      <div class="row timeslot12PM">
+      <!-- Time block for 12pm -->
+      <div class="row timeslot12pm">
         <!-- the first row is for the first hour(12am) gap -->
         <div class="time-block input-group col-1">
           <p class="hour">12:00PM</p>
         </div>
         <div class="description col-10 form-group">
           <textarea id="time12PM" class="form-control textboarder" rows="2" style="resize:none" name="12"></textarea>
-          <button class="saveBtn col-1 btn"></button> 
-        </div>    
+        </div> 
+        <div class="col-1">
+          <button class="saveBtn btn"><i class="fas fa-save"></i></button>  
+        </div>   
       </div>
 
       <!-- Time block for 1PM -->
@@ -88,57 +86,65 @@
           <p class="hour">01:00PM</p>
         </div>
         <div class="description col-10 form-group">
-          <textarea id="time1PM" class="form-control textboarder" rows="2" style="resize:none" name="13"></textarea>
+          <textarea id="time1pm" class="form-control textboarder" rows="2" style="resize:none" name="13"></textarea>
           <button class="saveBtn col-1 btn"></button> 
         </div>    
       </div>
 
-      <!-- Time block for 2PM -->
-      <div class="row timeslot2PM">
+      <!-- Time block for 2pm -->
+      <div class="row timeslot2pm">
         <div class="time-block input-group col-1">
           <p class="hour">02:00PM</p>
         </div>
         <div class="description col-10 form-group">
-          <textarea id="time2PM" class="form-control textboarder" rows="2" style="resize:none" name="14"></textarea>
-          <button class="saveBtn col-1 btn"></button> 
+          <textarea id="time2pm" class="form-control textboarder" rows="2" style="resize:none" name="14"></textarea>
+          <button class="saveBtn col-1 btn">
+            <i class="fas fa-save"></i>
+          </button> 
         </div>    
       </div>
 
-      <!-- Time block for 3PM -->
-      <div class="row timeslot3PM">
+      <!-- Time block for 3pm -->
+      <div class="row timeslot3pm">
         <div class="time-block input-group col-1">
           <p class="hour">03:00PM</p>
         </div>
         <div class="description col-10 form-group">
-          <textarea id="time3PM" class="form-control textboarder" rows="2" style="resize:none" name="15"></textarea>
-          <button class="saveBtn col-1 btn"></button> 
+          <textarea id="time3pm" class="form-control textboarder" rows="2" style="resize:none" name="15"></textarea>
+          <button class="saveBtn col-1 btn">
+            <i class="fas fa-save"></i>
+          </button> 
         </div>    
       </div>
 
-      <!-- Time block for 4PM -->
-      <div class="row timeslot4PM">
+      <!-- Time block for 4pm -->
+      <div class="row timeslot4pm">
         <div class="time-block input-group col-1">
           <p class="hour">04:00PM</p>
         </div>
         <div class="description col-10 form-group">
-          <textarea id="time4PM" class="form-control textboarder" rows="2" style="resize:none" name="16"></textarea>
-          <button class="saveBtn col-1 btn"></button> 
+          <textarea id="time4pm" class="form-control textboarder" rows="2" style="resize:none" name="16"></textarea>
+          <button class="saveBtn col-1 btn">
+            <i class="fas fa-save"></i>
+          </button> 
         </div>    
       </div> 
 
-      <!-- Time block for 5PM -->
-      <div class="row timeslot5PM">
+      <!-- Time block for 5pm -->
+      <div class="row timeslot5pm">
         <div class="time-block input-group col-1">
           <p class="hour">05:00PM</p>
         </div>
         <div class="description col-10 form-group">
-          <textarea id="time5PM" class="form-control textboarder" rows="2" style="resize:none" name="17"></textarea>
-          <button class="saveBtn col-1 btn"></button> 
+          <textarea id="time5pm" class="form-control textboarder" rows="2" style="resize:none" name="17"></textarea>
+          <button class="saveBtn col-1 btn">
+            <i class="fas fa-save"></i>
+          </button> 
         </div>    
       </div>
     </div>
 
-    <!-- links to the jQuery -->
+    <!-- links to the jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <!-- link the javaScripts file -->
