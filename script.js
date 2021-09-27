@@ -8,9 +8,30 @@ $(document).ready(function(){
     let check = parseInt(moment().format("HH"));
     console.log(check);
 
+    // variable linked to the seperate time slots in the planner
+    let t9 = localStorage.getItem("9am");
+    $("#time9am").text(t9);
+    console.log(t9);
+    let t10 = localStorage.getItem("10am");
+    $("#tim10am").text(t10);
+    let t11 = localStorage.getItem("11am");
+    $("#time11am").text(t11);
+    let t12 = localStorage.getItem("12pm");
+    $("#time12pm").text(t12);
+    let t1 = localStorage.getItem("1pm");
+    $("#time1pm").text(t1);
+    let t2 = localStorage.getItem("2pm");
+    $("#time2pm").text(t2);
+    let t3 = localStorage.getItem("3pm");
+    $("#time3pm").text(t3);
+    let t4 = localStorage.getItem("4pm");
+    $("#time4pm").text(t4);
+    let t5 = localStorage.getItem("5pm");
+    $("#time5pm").text(t5);
+
     // if statement which determine the colour of the planner dependent on the time of day
     $("textarea").each(function(){
-        let current = parseInt($(this).attr("name"));
+        let current = parseInt($(this).attr("nameHour"));
         // if statement stating that if the time past the text box should turn grey
         if (current < check){
             $(this).addClass("past");
@@ -25,31 +46,22 @@ $(document).ready(function(){
         }
     })
     // this is where the local storage will be located and stored
-    $(".saveBtn").on("click",function(){
-        let agenda = $(this).sibling(".description").val();
-        let time = $(this).sibling(".hour").text();
-        localStorage.getItem(time,agenda);
-        $("this").sibling(".description").textConteent(localStorage.value);
-
+    $("saveBtn").on("click",function(){
+        let info = $(this).siblings(".description").val();
+        let time = $(this).siblings(".hour").text();
+        localStorage.setItem(time,info);
+        $("this").siblings(".description").textContent(localStorage.value);
     })
-    let hour9 = localStorage.getItem("9AM")
-    let hour10 = localStorage.getItem("10AM")
-    let hour11 = localStorage.getItem("11AM")
-    let hour12 = localStorage.getItem("12PM")
-    let hour1 = localStorage.getItem("1PM")
-    let hour2 = localStorage.getItem("2PM")
-    let hour3 = localStorage.getItem("3PM")
-    let hour4 = localStorage.getItem("4PM")
-    let hour5 = localStorage.getItem("5PM")
+    
     // present the local storage events entered into the text in box 
-    $("#time9AM").text(hour9)
-    $("#time10AM").text(hour10)
-    $("#time10AM").text(hour11)
-    $("#time12PM").text(hour12)
-    $("#time1PM").text(hour1)
-    $("#time2PM").text(hour2)
-    $("#time3PM").text(hour3)
-    $("#time4PM").text(hour4)
-    $("#time5PM").text(hour5)
+    $("#time9am").append(localStorage.getItem("9am"))
+    $("#time10am").append(localStorage.getItem("10am"))
+    $("#time10am").append(localStorage.getItem("10am"))
+    $("#time12pm").append(localStorage.getItem("12pm"))
+    $("#time1pm").append(localStorage.getItem("1pm"))
+    $("#time2pm").append(localStorage.getItem("2pm"))
+    $("#time3pm").append(localStorage.getItem("3pm"))
+    $("#time4pm").append(localStorage.getItem("4pm"))
+    $("#time5pm").append(localStorage.getItem("5pm"))
 })
 
