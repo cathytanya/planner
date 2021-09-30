@@ -1,4 +1,11 @@
 $(document).ready(function(){
+    // this is where the local storage will be located and stored
+    $("saveBtn").on("click",function(){
+        let info = $(this).siblings(".description").val();
+        let time = $(this).siblings(".hour").val();
+        localStorage.setItem(info);
+        console.log(info)
+    })
     // display the current day and time in the header of the website
     let todayDate = moment().format("ddd MMM Do, YYYY, hh:mm:ss")
     $("#currentDay").text(todayDate)
@@ -45,14 +52,7 @@ $(document).ready(function(){
             $(this).addClass("future");
         }
     })
-    // this is where the local storage will be located and stored
-    $("saveBtn").on("click",function(){
-        let info = $(this).siblings(".description").val();
-        let time = $(this).siblings(".hour").text();
-        localStorage.setItem(time,info);
-        $("this").siblings(".description").textContent(localStorage.value);
-    })
-    
+
     // present the local storage events entered into the text in box 
     $("#time9am").append(localStorage.getItem("9am"))
     $("#time10am").append(localStorage.getItem("10am"))
