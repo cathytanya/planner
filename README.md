@@ -2,7 +2,7 @@
 
 The purpose of this assignment is to make a functional day planner.
 
-## Link to Page: https://cathytanya.github.io/planner/
+## Link: https://cathytanya.github.io/planner/
 
 ## Criteria
 
